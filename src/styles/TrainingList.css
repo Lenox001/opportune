@@ -1,0 +1,89 @@
+.training-list-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.training-list-title {
+  color: #333;
+  text-align: center;
+}
+
+.no-trainings {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+}
+
+.training-list {
+  list-style: none;
+  padding: 0;
+}
+
+.training-item {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.training-title {
+  color: #222;
+}
+
+.training-image {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.training-description {
+  line-height: 1.5;
+  color: #555;
+}
+
+.training-links {
+  margin-top: 10px;
+}
+
+.apply-button {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+
+.apply-button:hover {
+  background-color: #0056b3;
+}
+
+.more-info {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.more-info:hover {
+  text-decoration: underline;
+}
+
+.navigation-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.home-button {
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.home-button:hover {
+  color: #007bff;
+}

@@ -1,0 +1,72 @@
+.footer {
+  text-align: center;
+  padding: 5px; /* Reduced padding */
+  background: #1a1a1a;
+  color: #b0b0b0;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999; /* Ensure it stays below the button */
+}
+
+.main-content {
+  padding-bottom: 80px; /* Ensures content is not hidden by footer */
+}
+
+
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.social-icon {
+  font-size: 24px;
+  color: #b0b0b0;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Glowing hover effect */
+.whatsapp:hover {
+  color: #25D366;
+  transform: scale(1.2);
+  text-shadow: 0 0 10px #25D366;
+}
+
+.instagram:hover {
+  color: #E1306C;
+  transform: scale(1.2);
+  text-shadow: 0 0 10px #E1306C;
+}
+
+/* Animated Footer Text */
+.footer-text {
+  animation: textGlow 1.5s infinite alternate;
+}
+
+@keyframes textGlow {
+  from {
+    color: #b0b0b0;
+    text-shadow: 0 0 5px rgba(176, 176, 176, 0.5);
+  }
+  to {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+    font-size: 12px;
+    padding: 15px;
+  }
+  .social-icon {
+    font-size: 20px;
+  }
+}

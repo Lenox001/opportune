@@ -1,0 +1,76 @@
+.scholarship-list-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.title {
+  color: #333;
+  text-align: center;
+}
+
+.no-scholarships {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+}
+
+.scholarship-list {
+  list-style: none;
+  padding: 0;
+}
+
+.scholarship-item {
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+}
+
+.scholarship-title {
+  color: #333;
+}
+
+.scholarship-image {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 10px 0;
+}
+
+.scholarship-description {
+  line-height: 1.6;
+  color: #555;
+}
+
+.scholarship-links {
+  margin-top: 10px;
+}
+
+.apply-link,
+.more-info-link {
+  font-weight: bold;
+  text-decoration: none;
+  color: #007bff;
+  margin-right: 5px;
+}
+
+.apply-link:hover,
+.more-info-link:hover {
+  text-decoration: underline;
+}
+
+.home-button {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  margin-top: 20px;
+}
+
+.home-button:hover {
+  color: #007bff;
+}
