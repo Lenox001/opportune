@@ -8,7 +8,7 @@ function TrainingDetail() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/trainings/${slug}/`)
+    fetch(`https://opportune.pythonanywhere.com/api/trainings/${slug}/`)
       .then((response) => response.json())
       .then((data) => {
         setTraining(data);
@@ -25,38 +25,32 @@ function TrainingDetail() {
 
   return (
     <div className="training-detail-container">
-      <h2 className="training-title">{training.title}</h2>
-      {training.image && (
-        <img
-          src={training.image}
-          alt={training.title}
-          className="training-image"
-        />
-      )}
-      <p>
-        <strong>Organizer:</strong> {training.organizer || "N/A"}
-      </p>
-      <p>
-        <strong>Start Date:</strong> {training.start_date || "N/A"}
-      </p>
-      <p className="training-description">
-        <strong>Description:</strong> {training.description}
-      </p>
-      <a
-        href={training.application_link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="apply-button"
-      >
-        Apply Now
-      </a>
+      <div className="training-card">
+        <h2 className="training-title">{training.title}</h2>
+        <p>
+          <strong>Organizer:</strong> {training.organizer || "N/A"}
+        </p>
+        <p>
+          <strong>Start Date:</strong> {training.start_date || "N/A"}
+        </p>
+        <p className="training-description">
+          <strong>Description:</strong> {training.description}
+        </p>
+        <a
+          href={training.application_link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="apply-button"
+        >
+          Apply Now
+        </a>
+      </div>
       <div className="navigation-links">
-        <Link to="/trainings" className="back-link">
-          🔙 Back to Trainings
-        </Link>{" "}
-        <br />
-        <Link to="/" className="home-link">
-          🏠 Back to Home
+        <Link to="/trainings" className="nav-button">
+          Back to Trainings
+        </Link>
+        <Link to="/" className="nav-button">
+          Back Home
         </Link>
       </div>
     </div>

@@ -8,7 +8,7 @@ function ScholarshipDetail() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/scholarships/${slug}/`)
+    fetch(`https://opportune.pythonanywhere.com/api/scholarships/${slug}/`)
       .then((response) => response.json())
       .then((data) => {
         setScholarship(data);

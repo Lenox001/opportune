@@ -6,7 +6,7 @@ function JobList() {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/jobs/")
+    fetch("https://opportune.pythonanywhere.com/api/jobs/")
       .then((response) => response.json())
       .then((data) => setJobs(data))
       .catch((error) => console.error("Error fetching jobs:", error));

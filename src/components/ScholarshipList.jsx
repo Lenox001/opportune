@@ -6,7 +6,7 @@ function ScholarshipList() {
   const [scholarships, setScholarships] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/scholarships/")
+    fetch("https://opportune.pythonanywhere.com/api/scholarships/")
       .then((response) => response.json())
       .then((data) => setScholarships(data))
       .catch((error) => console.error("Error fetching scholarships:", error));

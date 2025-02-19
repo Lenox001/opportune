@@ -6,7 +6,7 @@ function TrainingList() {
   const [trainings, setTrainings] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/trainings/")
+    fetch("https://opportune.pythonanywhere.com/api/trainings/")
       .then((response) => response.json())
       .then((data) => setTrainings(data))
       .catch((error) => console.error("Error fetching trainings:", error));
@@ -18,17 +18,10 @@ function TrainingList() {
       {trainings.length === 0 ? (
         <p className="no-trainings">No trainings available at the moment.</p>
       ) : (
-        <ul className="training-list">
+        <div className="training-grid">
           {trainings.map((training) => (
-            <li key={training.slug} className="training-item">
+            <div key={training.slug} className="training-card">
               <h3 className="training-title">{training.title}</h3>
-              {training.image && (
-                <img
-                  src={training.image}
-                  alt={training.title}
-                  className="training-image"
-                />
-              )}
               <p className="training-description">{training.description}</p>
               <p>
                 <strong>Organizer:</strong> {training.organizer || "N/A"}
@@ -50,13 +43,13 @@ function TrainingList() {
                   More Info
                 </Link>
               </div>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
       <div className="navigation-links">
         <Link to="/" className="home-button">
-           Back to Home
+          Back to Home
         </Link>
       </div>
     </div>

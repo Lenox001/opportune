@@ -1,5 +1,6 @@
+/* Training List Container */
 .training-list-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
   padding: 20px;
   font-family: Arial, sans-serif;
@@ -8,62 +9,80 @@
   border: 1px solid #ddd;
 }
 
+/* Title */
 .training-list-title {
   color: #333;
   text-align: center;
+  font-size: 24px;
+  font-weight: bold;
 }
 
+/* No Trainings Message */
 .no-trainings {
   text-align: center;
   font-size: 18px;
   color: #777;
 }
 
-.training-list {
-  list-style: none;
+/* Grid Layout for Cards */
+.training-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
   padding: 0;
 }
 
-.training-item {
+/* Training Card */
+.training-card {
+  background: #fff;
   padding: 15px;
-  border-bottom: 1px solid #ddd;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  border-left: 5px solid #007bff; /* Left border colored */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
+.training-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Training Title */
 .training-title {
   color: #222;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.training-image {
-  width: 100%;
-  max-width: 150px;
-  height: auto;
-  display: block;
-  margin-top: 10px;
-  border-radius: 5px;
-}
-
+/* Description */
 .training-description {
   line-height: 1.5;
   color: #555;
+  font-size: 14px;
 }
 
+/* Links Container */
 .training-links {
   margin-top: 10px;
 }
 
+/* Apply Button */
 .apply-button {
   display: inline-block;
   background-color: #007bff;
   color: white;
   text-decoration: none;
-  padding: 6px 12px;
+  padding: 8px 14px;
   border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .apply-button:hover {
   background-color: #0056b3;
 }
 
+/* More Info Link */
 .more-info {
   color: #007bff;
   text-decoration: none;
@@ -73,6 +92,7 @@
   text-decoration: underline;
 }
 
+/* Navigation Links */
 .navigation-links {
   text-align: center;
   margin-top: 20px;
@@ -81,9 +101,28 @@
 .home-button {
   font-weight: bold;
   text-decoration: none;
-  color: #333;
+  color:white;
+  width: 30%;
 }
 
 .home-button:hover {
   color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .training-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .training-card {
+    padding: 12px;
+  }
+
+  .apply-button {
+    width: 20%;
+    text-align: center;
+  }
 }

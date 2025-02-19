@@ -7,7 +7,7 @@ function JobDetails() {
   const [job, setJob] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/jobs/${slug}/`)
+    fetch(`https://opportune.pythonanywhere.com/api/jobs/${slug}/`)
       .then((response) => response.json())
       .then((data) => setJob(data))
       .catch((error) => console.error("Error fetching job details:", error));

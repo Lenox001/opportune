@@ -3,25 +3,24 @@
   margin: 40px auto;
   padding: 20px;
   font-family: "Arial", sans-serif;
-  background: #ffffff;
+  background: #ffffff; /* Keeping the original background */
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+}
+
+.training-card {
+  padding: 20px;
+  border-left: 5px solid #1339cf;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .training-title {
   color: #222;
   font-size: 24px;
   margin-bottom: 15px;
-}
-
-.training-image {
-  width: 100%;
-  max-width: 350px;
-  height: auto;
-  margin: 15px 0;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .training-description {
@@ -32,41 +31,67 @@
   margin-top: 15px;
 }
 
+/* Apply Button */
 .apply-button {
   display: inline-block;
-  background: #0056b3;
+  background: #007bff; /* Changed to blue */
   color: #fff;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border-radius: 6px;
   font-weight: bold;
   transition: background 0.3s ease-in-out;
+  width: 10%;
+  min-width: 120px;
+  text-align: center;
 }
 
 .apply-button:hover {
-  background: #00408a;
+  background: #0056b3; /* Darker blue on hover */
 }
 
+/* Navigation Buttons */
 .navigation-links {
-  margin-top: 25px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 5px; /* Keeping buttons close */
 }
 
-.navigation-links a {
-  font-weight: bold;
+.nav-button {
+  display: inline-block;
+  background: #007bff; /* Changed to blue */
+  color: #fff;
   text-decoration: none;
-  color: #0056b3;
-  transition: color 0.3s ease-in-out;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  width: 20%;
+  min-width: 120px;
+  text-align: center;
+  transition: background 0.3s ease-in-out;
 }
 
-.navigation-links a:hover {
-  color: #003b7a;
-  text-decoration: underline;
+.nav-button:hover {
+  background: #0056b3; /* Darker blue on hover */
 }
 
-.loading-text, .not-found-text {
+/* Responsive Design */
+@media (max-width: 600px) {
+  .apply-button,
+  .nav-button {
+    width: 10%;
+    padding: 3px; /* Slightly larger for better touch accessibility */
+  }
+
+  .navigation-links {
+    flex-direction: row; /* Keep buttons side by side */
+    gap: 5px;
+  }
+}
+
+.loading-text,
+.not-found-text {
   text-align: center;
   font-size: 18px;
   font-weight: bold;
