@@ -21,9 +21,9 @@ function Home() {
   const fetchData = async () => {
     try {
       const endpoints = {
-        jobs: "http://localhost:8000/api/jobs/",
-        scholarships: "http://localhost:8000/api/scholarships/",
-        trainings: "http://localhost:8000/api/trainings/",
+        jobs: "https://opportune.pythonanywhere.com/api/jobs/",
+        scholarships: "https://opportune.pythonanywhere.com/api/scholarships/",
+        trainings: "https://opportune.pythonanywhere.com/api/trainings/",
       };
 
       const responses = await Promise.all(
@@ -53,7 +53,7 @@ function Home() {
 
     try {
       const endpoints = ["jobs", "scholarships", "trainings"].map((type) => ({
-        url: `http://localhost:8000/api/${type}/`,
+        url: `https://opportune.pythonanywhere.com/api/${type}/`,
         type,
       }));
 

@@ -41,10 +41,10 @@ function JobDetails() {
       <br />
       <div className="navigation-links">
         <Link to="/jobs">
-          <button className="back-button">Back to Jobs</button>
+          <button className="back-buttons">Back to Jobs</button>
         </Link>
         <Link to="/">
-          <button className="back-button">Back to Home</button>
+          <button className="home-buttons">Back to Home</button>
         </Link>
       </div>
     </div>

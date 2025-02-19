@@ -75,7 +75,7 @@ p {
 }
 
 .apply-link,
-.more-info-link {
+.more-info-link2 {
   font-weight: bold;
   text-decoration: none;
   color: #007bff;
@@ -83,13 +83,13 @@ p {
 }
 
 .apply-link:hover,
-.more-info-link:hover {
+.more-info-link2:hover {
   color: #0056b3;
   text-decoration: underline;
 }
 
 /* Home Button */
-.home-button {
+.home-button2 {
   display: inline-block;
   font-size: 14px;
   font-weight: bold;
@@ -102,7 +102,7 @@ p {
   text-align: center;
 }
 
-.home-button:hover {
+.home-button2:hover {
   background-color: #0056b3;
 }
 
@@ -122,7 +122,7 @@ p {
     border-left: 4px solid #007bff;
   }
 
-  .home-button {
+  .home-button2 {
     display: block;
     width: 150px;
     margin: 10px auto;
@@ -141,7 +141,7 @@ p {
     font-size: 18px;
   }
 
-  .home-button {
+  .home-button2 {
     width: 120px;
     font-size: 12px;
     padding: 5px 10px;

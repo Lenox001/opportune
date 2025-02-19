@@ -48,7 +48,7 @@ function TrainingList() {
         </div>
       )}
       <div className="navigation-links">
-        <Link to="/" className="home-button">
+        <Link to="/" className="home-button3">
           Back to Home
         </Link>
       </div>

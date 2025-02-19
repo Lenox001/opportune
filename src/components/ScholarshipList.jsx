@@ -46,7 +46,7 @@ function ScholarshipList() {
                 <span> | </span>
                 <Link
                   to={`/scholarships/${scholarship.slug}`}
-                  className="more-info-link"
+                  className="more-info"
                 >
                   More Info
                 </Link>
@@ -56,7 +56,7 @@ function ScholarshipList() {
         </ul>
       )}
       <br />
-      <Link to="/" className="home-button">
+      <Link to="/" className="home-button2">
          Back to Home
       </Link>
     </div>

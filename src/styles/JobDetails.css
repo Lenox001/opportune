@@ -21,7 +21,6 @@
   }
 }
 
-
 /* Job Title */
 .job-title {
   color: #333;
@@ -66,8 +65,8 @@
   color: white;
 }
 
-.back-button,
-.home-button {
+.back-buttons,
+.home-buttons {
   display: inline-block; /* Ensures correct block behavior */
   font-weight: bold;
   text-decoration: none;
@@ -82,15 +81,14 @@
   font-size: 14px;
 }
 
-
-.back-button:hover,
-.home-button:hover {
+.back-buttons:hover,
+.home-buttons:hover {
   background-color: #0056b3;
   transform: translateY(-1px);
 }
 
-.back-button:active,
-.home-button:active {
+.back-buttons:active,
+.home-buttons:active {
   transform: translateY(0);
 }
 
@@ -102,31 +100,65 @@
   margin-top: 40px;
 }
 
-/* Responsive Design */
+/* Responsive Design for Small Screens */
 @media (max-width: 768px) {
   .job-details-container {
-    padding: 20px;
-    margin: 20px auto;
-    margin-left: 5px;
-    margin-right: 5px;
+    padding: 15px;
+    margin: 20px 10px; /* Reduced margin for small screens */
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .job-title {
-    font-size: 24px;
+    font-size: 22px; /* Smaller font size for small screens */
   }
 
   .job-description {
-    font-size: 14px;
+    font-size: 14px; /* Smaller font size for small screens */
+    line-height: 1.6; /* Adjusted line height for better readability */
   }
 
   .apply-link {
     padding: 8px 16px;
     font-size: 14px;
+    width: 100%; /* Full width for better tap targets */
+    text-align: center; /* Center text */
   }
 
-  .back-button,
-  .home-button {
-    padding: 6px 10px;
-    font-size: 12px;
+  .navigation-links {
+    flex-direction: column; /* Stack buttons vertically on small screens */
+    gap: 8px; /* Reduced gap between buttons */
+  }
+
+  .back-buttons,
+  .home-buttons {
+    width: 100%; /* Full width for better tap targets */
+    padding: 10px; /* Slightly larger padding for easier tapping */
+    font-size: 14px; /* Adjusted font size */
+  }
+}
+
+/* Extra Small Screens (e.g., phones in portrait mode) */
+@media (max-width: 480px) {
+  .job-details-container {
+    padding: 10px;
+    margin: 10px 5px; /* Further reduced margin */
+  }
+
+  .job-title {
+    font-size: 20px; /* Even smaller font size */
+  }
+
+  .job-description {
+    font-size: 13px; /* Smaller font size */
+  }
+
+  .apply-link {
+    font-size: 13px; /* Smaller font size */
+  }
+
+  .back-buttons,
+  .home-buttons {
+    font-size: 13px; /* Smaller font size */
   }
 }
