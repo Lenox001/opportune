@@ -44,7 +44,7 @@ function JobDetails() {
           <button className="back-button">Back to Jobs</button>
         </Link>
         <Link to="/">
-          <button className="home-button">Back to Home</button>
+          <button className="back-button">Back to Home</button>
         </Link>
       </div>
     </div>
