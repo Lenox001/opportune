@@ -47,6 +47,7 @@
 /* Animated Footer Text */
 .footer-text {
   animation: textGlow 1.5s infinite alternate;
+  text-align: center;
 }
 
 @keyframes textGlow {

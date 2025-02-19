@@ -115,6 +115,7 @@
   border-radius: 25px;
   transition: all var(--transition-speed) ease;
   text-align: center;
+  margin-left: 1rem;
 }
 
 .back-home:hover {

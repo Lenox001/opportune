@@ -24,19 +24,13 @@ function ScholarshipList() {
           {scholarships.map((scholarship) => (
             <li key={scholarship.slug} className="scholarship-item">
               <h3 className="scholarship-title">{scholarship.title}</h3>
-              {scholarship.image && (
-                <img
-                  src={scholarship.image}
-                  alt={scholarship.title}
-                  className="scholarship-image"
-                />
-              )}
-              <p className="scholarship-description">
-                {scholarship.description}
-              </p>
               <p>
                 <strong>Provider:</strong> {scholarship.provider || "N/A"}
               </p>
+              <p className="scholarship-description">
+                {scholarship.description}
+              </p>
+
               <p>
                 <strong>Deadline:</strong> {scholarship.deadline || "Ongoing"}
               </p>
@@ -48,8 +42,8 @@ function ScholarshipList() {
                   className="apply-link"
                 >
                   Apply Now
-                </a>{" "}
-                |{" "}
+                </a>
+                <span> | </span>
                 <Link
                   to={`/scholarships/${scholarship.slug}`}
                   className="more-info-link"
@@ -63,7 +57,7 @@ function ScholarshipList() {
       )}
       <br />
       <Link to="/" className="home-button">
-        🏠 Back to Home
+         Back to Home
       </Link>
     </div>
   );

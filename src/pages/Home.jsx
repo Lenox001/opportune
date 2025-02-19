@@ -228,31 +228,15 @@ function Home() {
       <div className="career-advice">
         <h2>Career Advice & Guidance</h2>
         <p>
-          Building a successful career requires dedication, continuous learning,
-          and strategic planning. Start by tailoring your resume and cover
-          letter for each job application, ensuring they highlight your most
-          relevant skills and experiences. Employers appreciate candidates who
-          take the time to align their applications with the job description. If
-          you're seeking scholarships, research thoroughly and apply to those
-          that match your skills, achievements, and aspirations. A well-crafted
-          application, backed by a strong personal statement, can significantly
-          boost your chances of securing financial aid for your education.
-          Investing in your growth through training programs is essential. The
-          job market is constantly evolving, and acquiring new certifications or
-          skills can set you apart from the competition. Whether it's technical
-          training, soft skills development, or leadership courses, continuous
-          learning keeps you adaptable and relevant in your field. After
-          submitting applications, don’t hesitate to follow up with a polite and
-          professional email. Expressing your enthusiasm for a role or
-          opportunity shows initiative and keeps you on the employer’s radar.
-          Networking is another powerful tool—connect with professionals in your
-          industry, attend job fairs, and engage in discussions on platforms
-          like LinkedIn. Confidence and persistence are key to success.
-          Rejections are part of the journey, but each experience is a learning
-          opportunity. Analyze feedback, refine your approach, and keep moving
-          forward. Remember, success doesn’t happen overnight—it’s built through
-          resilience, skill-building, and seizing opportunities as they come.
-          Stay motivated, keep learning, and never stop striving for excellence!
+          Build a successful career with dedication, learning, and strategy.
+          Tailor your resume and cover letter to highlight relevant skills.
+          Research scholarships that match your achievements and craft strong
+          applications. Invest in training to stay competitive—whether technical
+          skills, leadership, or soft skills. Follow up on applications
+          professionally, and network through job fairs and LinkedIn. Stay
+          persistent.Rejections are learning opportunities—refine, adapt, and
+          push forward. Success is built through resilience, growth, and
+          seizing opportunities.** Keep learning and striving for excellence!
         </p>
       </div>
     </div>
