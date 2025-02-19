@@ -180,3 +180,6 @@
 .job-item:hover::after {
   transform: scaleX(1);
 }
+.no-job{
+  margin-left: 2rem;
+}

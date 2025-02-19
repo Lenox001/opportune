@@ -17,7 +17,7 @@ function JobList() {
       <h2 style={{ marginLeft: "2rem" }}>Available Jobs</h2>
 
       {jobs.length === 0 ? (
-        <p>No jobs available at the moment.</p>
+        <p className="no-job">No jobs available at the moment.</p>
       ) : (
         <ul className="job-list">
           {jobs.map((job) => (
