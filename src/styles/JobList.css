@@ -1,13 +1,16 @@
 /* CSS Variables for easy customization */
 :root {
-  --primary-color: #3498db;
-  --secondary-color: #2ecc71;
-  --accent-color: #e74c3c;
+  --primary-color: #6a11cb;
+  --secondary-color: #2575fc;
+  --accent-color: #ff416c;
   --text-color: #2c3e50;
-  --background-color: #f9f9f9;
+  --background-color: #f4f7f6;
   --shadow-color: rgba(0, 0, 0, 0.1);
-  --hover-shadow-color: rgba(0, 0, 0, 0.15);
-  --transition-speed: 0.3s;
+  --hover-shadow-color: rgba(0, 0, 0, 0.2);
+  --transition-speed: 0.4s;
+  --gradient-primary: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  --gradient-secondary: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+  --gradient-accent: linear-gradient(135deg, #25a25a 0%, #2ecc71 100%);
 }
 
 /* Reset margins and padding for specific elements */
@@ -17,110 +20,135 @@
   box-sizing: border-box;
 }
 
+/* Body Background */
+body {
+  background: var(--background-color);
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
 /* Job Listings Container */
 .job-listings {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-  gap: 20px; /* Space between job items */
-  padding: 20px; /* Padding for the container */
-  max-width: 1200px; /* Max width for the grid */
+  gap: 30px; /* Space between job items */
+  padding: 40px; /* Padding for the container */
+  max-width: 1400px; /* Max width for the grid */
   margin: 0 auto; /* Center the grid */
 }
 
 /* Job Item Styles */
 .job-item {
   background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px var(--shadow-color);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px var(--shadow-color);
   transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
   overflow: hidden;
   position: relative;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  border-left: 4px solid #25a25a; /* Added border width and style */
+  border-left: 6px solid transparent;
+  background-clip: padding-box;
+  animation: fadeIn 0.6s ease-out;
 }
 
-
 .job-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px var(--hover-shadow-color);
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px var(--hover-shadow-color);
+  border-left-color: var(--primary-color);
 }
 
 /* Job Title - Bold */
 .job-item h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.6rem;
+  font-weight: 700;
   color: var(--text-color);
-  margin-bottom: 10px;
-  
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.job-item h3::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--primary-color);
+  border-radius: 2px;
 }
 
 /* Job Details */
 .job-item p {
   font-size: 1rem;
-  color: #555;
-  margin: 8px 0;
+  color: #666;
+  margin: 10px 0;
 }
 
 /* Buttons Container */
 .buttons-container {
   display: flex;
-  gap: 10px; /* Space between buttons */
-  margin-top: 15px;
+  gap: 15px; /* Space between buttons */
+  margin-top: 20px;
 }
 
 /* Button Styles */
-.apply-link, .more-info {
+.apply-link0, .more-info0 {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 12px 24px;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: none;
-  border-radius: 25px;
+  border-radius: 30px;
   transition: all var(--transition-speed) ease;
   cursor: pointer;
+  text-align: center;
+  flex: 1;
 }
 
-.apply-link {
-  background: var(--primary-color);
+.apply-link0 {
+  background: var(--gradient-primary);
+  color: white;
+  border: 2px solid;
+}
+
+.apply-link0:hover {
+  background: var(--gradient-secondary);
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 65, 108, 0.3);
+}
+
+.more-info0 {
+  background: var(--gradient-accent);
   color: white;
 }
 
-.apply-link:hover {
-  background: #217dbb;
+.more-info0:hover {
+  background: var(--gradient-secondary);
   transform: scale(1.05);
-}
-
-.more-info {
-  background: var(--secondary-color);
-  color: white;
-}
-
-.more-info:hover {
-  background: #25a25a;
-  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 75, 43, 0.3);
 }
 
 /* Back Home Button */
-.back-home {
+.back-home0 {
   display: inline-block;
-  margin: 30px auto; /* Center the button */
-  padding: 12px 24px;
-  background: var(--accent-color);
+  margin: 40px auto; /* Center the button */
+  padding: 14px 28px;
+  background: var(--gradient-accent);
   color: white;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: none;
-  border-radius: 25px;
+  border-radius: 30px;
   transition: all var(--transition-speed) ease;
   text-align: center;
   margin-left: 1rem;
 }
 
-.back-home:hover {
-  background: #c0392b;
+.back-home0:hover {
+  background: var(--gradient-secondary);
   transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 65, 108, 0.3);
 }
 
 /* Animations */
@@ -135,32 +163,47 @@
   }
 }
 
-.job-item {
-  animation: fadeIn 0.5s ease-out;
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Gradient Animation for Job Items */
+.job-item:hover {
+  background: linear-gradient(135deg, #ffffff 0%, #f4f7f6 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .job-listings {
     grid-template-columns: 1fr; /* Single column on smaller screens */
-    padding: 10px; /* Reduce padding for smaller screens */
+    padding: 20px; /* Reduce padding for smaller screens */
   }
 
   .job-item {
-    padding: 15px;
+    padding: 20px;
   }
 
   .job-item h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .job-item p {
     font-size: 0.95rem;
   }
 
-  .apply-link, .more-info {
+  .apply-link0, .more-info0 {
     font-size: 0.9rem;
-    padding: 8px 16px;
+    padding: 10px 20px;
   }
 }
 
@@ -180,6 +223,11 @@
 .job-item:hover::after {
   transform: scaleX(1);
 }
-.no-job{
+
+.no-job {
   margin-left: 2rem;
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  padding: 20px;
 }

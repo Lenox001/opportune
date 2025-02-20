@@ -1,16 +1,33 @@
+/* CSS Variables for easy customization */
+:root {
+  --primary-color: #6a11cb;
+  --secondary-color: #2575fc;
+  --accent-color: #ff416c;
+  --text-color: #2c3e50;
+  --background-color: #f4f7f6;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --hover-shadow-color: rgba(0, 0, 0, 0.2);
+  --transition-speed: 0.4s;
+  --gradient-primary: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  --gradient-secondary: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+  --gradient-accent: linear-gradient(135deg, #25a25a 0%, #2ecc71 100%);
+  --font-family: 'Poppins', sans-serif;
+}
+
 /* Main Job Details Section */
 .job-details-container {
   max-width: 800px;
   margin: 40px auto;
-  padding: 30px;
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  border-radius: 10px;
+  padding: 40px;
+  font-family: var(--font-family);
+  background: white;
+  border-radius: 16px;
   border: 1px solid #e0e0e0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid #00b309;
-  padding-left: 20px;
-  margin-left: 20px; /* Default margin for small screens */
+  box-shadow: 0 8px 24px var(--shadow-color);
+  border-left: 6px solid var(--primary-color);
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.6s ease-out;
 }
 
 /* Center on large screens only */
@@ -23,142 +40,205 @@
 
 /* Job Title */
 .job-title {
-  color: #333;
+  color: var(--text-color);
   text-align: center;
-  font-size: 28px;
-  margin-bottom: 20px;
-  font-weight: bold; /* Makes job title bold */
+  font-size: 32px;
+  margin-bottom: 25px;
+  font-weight: 700;
+  position: relative;
+}
+
+.job-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--primary-color);
+  border-radius: 2px;
 }
 
 /* Job Description */
 .job-description {
   line-height: 1.8;
   color: #555;
-  font-size: 16px;
-  margin-bottom: 25px;
+  font-size: 18px;
+  margin-bottom: 30px;
+  text-align: justify;
 }
 
 /* Apply Button */
-.apply-link {
+.apply-link1 {
   display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #007bff;
-  border-radius: 5px;
+  margin-top: 25px;
+  padding: 9px 12px;
+  font-weight: 600;
+  color: white;
+  background: var(--gradient-primary);
+  border-radius: 30px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: all var(--transition-speed) ease;
+  text-align: center;
+  width: 40%;
+  max-width: 100px;
+  box-shadow: 0 4px 15px rgba(106, 17, 203, 0.3);
 }
 
-.apply-link:hover {
-  background-color: #0056b3;
+.apply-link1:hover {
+  background: var(--gradient-secondary);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 65, 108, 0.4);
 }
 
 /* Navigation Links */
 .navigation-links {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
   margin-top: 30px;
+}
+
+.back-button1,
+.home-button1 {
+  display: inline-block;
+  font-weight: 600;
   text-decoration: none;
   color: white;
-}
-
-.back-buttons,
-.home-buttons {
-  display: inline-block; /* Ensures correct block behavior */
-  font-weight: bold;
-  text-decoration: none;
-  color: white; /* Ensures text stays white */
-  background-color: #1272d8; /* Blue */
-  padding: 8px 14px;
-  border-radius: 5px;
+  background: var(--gradient-primary);
+  padding: 12px 24px;
+  border-radius: 30px;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: all var(--transition-speed) ease;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(106, 17, 203, 0.3);
 }
 
-.back-buttons:hover,
-.home-buttons:hover {
-  background-color: #0056b3;
-  transform: translateY(-1px);
+.back-button1:hover,
+.home-button1:hover {
+  background: var(--gradient-secondary);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 65, 108, 0.4);
 }
 
-.back-buttons:active,
-.home-buttons:active {
+.back-button1:active,
+.home-button1:active {
   transform: translateY(0);
 }
 
 /* Loading Message */
 .loading {
   text-align: center;
-  font-size: 20px;
+  font-size: 24px;
   color: #777;
   margin-top: 40px;
+  font-weight: 600;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Gradient Animation for Job Details Container */
+.job-details-container:hover {
+  background: linear-gradient(135deg, #ffffff 0%, #f4f7f6 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
 }
 
 /* Responsive Design for Small Screens */
 @media (max-width: 768px) {
   .job-details-container {
-    padding: 15px;
-    margin: 20px 10px; /* Reduced margin for small screens */
-    margin-left: 10px;
-    margin-right: 10px;
+    padding: 20px;
+    margin: 20px 10px;
   }
 
   .job-title {
-    font-size: 22px; /* Smaller font size for small screens */
+    font-size: 26px;
   }
 
   .job-description {
-    font-size: 14px; /* Smaller font size for small screens */
-    line-height: 1.6; /* Adjusted line height for better readability */
+    font-size: 16px;
+    line-height: 1.6;
   }
 
-  .apply-link {
-    padding: 8px 16px;
-    font-size: 14px;
-    width: 100%; /* Full width for better tap targets */
-    text-align: center; /* Center text */
+  .apply-link1 {
+    padding: 8px 10px;
+    font-size: 12px;
+    max-width: 30%;
+  margin-left: 6rem;
   }
 
   .navigation-links {
-    flex-direction: column; /* Stack buttons vertically on small screens */
-    gap: 8px; /* Reduced gap between buttons */
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .back-buttons,
-  .home-buttons {
-    width: 100%; /* Full width for better tap targets */
-    padding: 10px; /* Slightly larger padding for easier tapping */
-    font-size: 14px; /* Adjusted font size */
+  .back-button1,
+  .home-button1 {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
   }
 }
 
 /* Extra Small Screens (e.g., phones in portrait mode) */
 @media (max-width: 480px) {
   .job-details-container {
-    padding: 10px;
-    margin: 10px 5px; /* Further reduced margin */
+    padding: 15px;
+    margin: 10px 5px;
   }
 
   .job-title {
-    font-size: 20px; /* Even smaller font size */
+    font-size: 24px;
   }
 
   .job-description {
-    font-size: 13px; /* Smaller font size */
+    font-size: 14px;
   }
 
-  .apply-link {
-    font-size: 13px; /* Smaller font size */
+  .apply-link1 {
+    font-size: 14px;
   }
 
-  .back-buttons,
-  .home-buttons {
-    font-size: 13px; /* Smaller font size */
+  .back-button1,
+  .home-button1 {
+    font-size: 12px;
   }
 }

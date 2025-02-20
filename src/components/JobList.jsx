@@ -34,12 +34,12 @@ function JobList() {
                 href={job.application_link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="apply-link"
+                className="apply-link0"
               >
                 Apply Now
               </a>{" "}
               |{" "}
-              <Link to={`/jobs/${job.slug}`} className="more-info">
+              <Link to={`/jobs/${job.slug}`} className="more-info0">
                 More Info
               </Link>
             </li>
@@ -47,7 +47,7 @@ function JobList() {
         </ul>
       )}
       <br />
-      <Link to="/" className="back-home">
+      <Link to="/" className="back-home0">
         Back to Home
       </Link>
     </div>
